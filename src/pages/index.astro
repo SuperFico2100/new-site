@@ -13,8 +13,10 @@ import "./navbar.css"
 					This is <span class="text-gradient">SuperFico2100</span>.
 				</h1>
                 <br>
-                <div class="mr-4">
-                    <img src="mail.svg" alt="Mail Icon" class="w-5 h-5 text-white" />
+                <div class="mr-4 icons">
+                    <a href="mailto:superfico2100@gmail.com"><img src="mail.svg" alt="Mail Icon" class="w-5 h-5 text-white" /></a>
+                    <a href="https://x.com/@SuperFico2100"><img src="twitter.svg" alt="Twitter/X Icon" class="w-5 h-5 text-white" /></a>
+                    <a href="https://discord.com/users/772229565002809354"><img src="discord.svg" alt="Discord Icon" class="w-5 h-5 text-white"></a>
                 </div>
 			</div>
 		</section>
@@ -40,7 +42,7 @@ import "./navbar.css"
 			<ul role="list" class="link-card-grid">
                 <Card repo="SuperFico2100/new-site" />
                 <Card repo="Enricozon-Team/enricozon2.0" />
-            </ul>
+            </ul>  
 		</section>
 		<section id="Spotify">
 			<h2 class="text-2xl font-bold tracking-tight mt-5">
@@ -145,6 +147,14 @@ import "./navbar.css"
         display: flex;
         justify-content: center;
         align-items: center;
+    }
+
+    .icons{
+        display: flex;
+    }
+
+    .icons img{
+        margin-right: 10px;
     }
     
     @media (max-width: 768px) {
