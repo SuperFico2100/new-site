@@ -11,17 +11,17 @@ import "./navbar.css"
 				<h1>
 					This is <span class="text-gradient">SuperFico2100</span>.
 				</h1>
+                <div class="mr-4 icons">
+                    <a href="mailto:superfico2100@gmail.com"><img src="mail.svg" alt="Mail Icon" class="w-5 h-5 text-white" /></a>
+                    <a href="https://x.com/@SuperFico2100"><img src="twitter.svg" alt="Twitter/X Icon" class="w-5 h-5 text-white" /></a>
+                    <a href="https://discord.com/users/772229565002809354"><img src="discord.svg" alt="Discord Icon" class="w-5 h-5 text-white"></a>
+                    <a href="https://github.com/SuperFico2100"><img src="github.svg" alt="GitHub Icon" class="w-5 h-5 text-white"></a>
+                    <a href="https://steamcommunity.com/id/SuperFico2100"><img src="steam.svg" alt="Steam Icon" class="w-5 h-5 text-white"></a>
+                </div>
 			</div>
 		</section>
-        <nav class="navbar">
-			<ul>
-				<li><a href="/">Home</a></li>
-				<li><a href="#">Info</a></li>
-				<li><a href="#">Contact Me</a></li>
-			</ul>
-		</nav>
         <section>
-            Nothing found. <br>
+            Nothing was found here. <br>
             Maybe try to go back <a class="coolyellow" href="/">home</a>?
         </section>
     </main>
@@ -53,6 +53,8 @@ import "./navbar.css"
 
     .welc-content {
         flex-grow: 1;
+        display: flex;
+        flex-direction: column;
     }
 
     h1 {
@@ -83,7 +85,7 @@ import "./navbar.css"
         text-decoration: none;
     }
 
-    .coolblue:hover {
+    .coolyellow:hover {
         color: transparent;
         background-image: linear-gradient(90deg, #ffd700, #ffa500);
         background-clip: text;
@@ -95,4 +97,13 @@ import "./navbar.css"
         grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
         padding: 0;
     }
+
+    .icons{
+        display: flex;
+    }
+
+    .icons img{
+        margin-right: 10px;
+    }
+
 </style>
