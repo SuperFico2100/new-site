@@ -1,10 +1,9 @@
 ---
 import Card from "../components/Card.astro";
 import Layout from "../layouts/Layout.astro";
-import "./navbar.css"
 ---
 
-<Layout title="Home - SuperFico2100">
+<Layout title="Home">
 	<main>
 		<section class="welc-start">
 			<img class="pfp" src="pfp.png" alt="SuperFico2100" />
@@ -25,7 +24,32 @@ import "./navbar.css"
             Hello! I'm a developer, gamer and student, 15 years old, and I love everything tech related. 
         </section>
 		<section>
-            
+            <h2 class="text-2xl font-bold tracking-tight mt-5">
+                My computers
+            </h2>
+            <p class="mb-2 text-sm text-gray-400">
+                These are the computers that I currently own.
+            </p>
+            <div class="flex">
+                <img src="main-laptop.png" alt="MSI Laptop">
+                <div>
+                    <h2 class="text-2xl font-bold tracking-tight">MSI Cyborg 15 AI A1VFK</h2>
+                    <p class="mb-2 text-sm text-gray-400 mt-5">
+                    This is my main laptop since Christmas 2024, the fastest and newest of my computers. 
+                    </p>
+                    <p>Specs:</p>
+                    <ul class="specs">
+                        <li>Intel Core Ultra 7 155H</li>
+                        <li>16 GB of DDR5 RAM</li>
+                        <li>Intel Arc Graphics</li>
+                        <li>NVIDIA GeForce RTX 4060</li>
+                        <li>Samsung 1TB M.2 NVMe SSD</li>
+                        <li>4-Zone RGB Keyboard</li>
+                        <li>3 USB Ports (2 USB 3.2, 1 USB-C), HDMI, Ethernet, 3.5mm jack and AC connector</li>
+                        <li>ppo</li>
+                    </ul>
+                </div>
+            </div>
         </section>
         <br>
 		<section id="repos">
@@ -154,6 +178,13 @@ import "./navbar.css"
 
     .icons img{
         margin-right: 10px;
+    }
+
+    .specs{
+        font-size: 0.875rem /* 14px */;
+        line-height: 1.25rem /* 20px */;
+        list-style-type: disc;
+        list-style-position: inside;
     }
     
     @media (max-width: 768px) {
