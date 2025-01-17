@@ -28,14 +28,14 @@ import Layout from "../layouts/Layout.astro";
                 My computers
             </h2>
             <p class="mb-2 text-sm text-gray-400">
-                These are the computers that I currently own.
+                These are the computers that I currently own, from the fastest to the slowest.
             </p>
             <div class="flex">
-                <img src="main-laptop.png" alt="MSI Laptop">
+                <img src="computers/main-laptop.jpg" alt="MSI Laptop" width="400">
                 <div>
                     <h2 class="text-2xl font-bold tracking-tight">MSI Cyborg 15 AI A1VFK</h2>
                     <p class="mb-2 text-sm text-gray-400 mt-5">
-                    This is my main laptop since Christmas 2024, the fastest and newest of my computers. 
+                        This is my main laptop since Christmas 2024, the fastest and newest of my computers. 
                     </p>
                     <p>Specs:</p>
                     <ul class="specs">
@@ -46,7 +46,67 @@ import Layout from "../layouts/Layout.astro";
                         <li>Samsung 1TB M.2 NVMe SSD</li>
                         <li>4-Zone RGB Keyboard</li>
                         <li>3 USB Ports (2 USB 3.2, 1 USB-C), HDMI, Ethernet, 3.5mm jack and AC connector</li>
-                        <li>ppo</li>
+                    </ul>
+                </div>
+            </div>
+            <br>
+            <div class="flex">
+                <img src="computers/tower-pc.jpg" alt="HP Tower PC" width="400">
+                <div>
+                    <h2 class="text-2xl font-bold tracking-tight">HP Pavilion P6622-it</h2>
+                    <p class="mb-2 text-sm text-gray-400 mt-5">
+                        This was my old setup, my dad's PC, a little slow but can handle a bit of gaming. 
+                    </p>
+                    <p>Specs:</p>
+                    <ul class="specs">
+                        <li>Intel Core i5 750</li>
+                        <li>MSI 2A9C (OEM)</li>
+                        <li>6 GB of DDR3 RAM</li>
+                        <li>NVIDIA GeForce 315 --> <b>NVIDIA GeForce GT 1030</b></li>
+                        <li>2 USB Ports on the front, 3.5 mm jack for headphones and microphone, SD card and Memory Stick Pro Duo slots</li>
+                    </ul>
+                    <p class="text-xs">&#x2800;</p>
+                    <p>Accessories:</p>
+                    <ul class="specs">
+                        <li>HP S2231a 1080p Monitor</li>
+                        <li>HP Keyboard & Mouse</li>
+                        <li>TP-Link Wi-Fi Adapter</li>
+                        <li>Genius Speakers</li>
+                        <li>AUKEY Webcam</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="flex">
+                <img src="computers/hp-laptop.jpg" alt="HP Laptop" width="400">
+                <div>
+                    <h2 class="text-2xl font-bold tracking-tight">HP Pavilion g6-1278sl</h2>
+                    <p class="mb-2 text-sm text-gray-400 mt-5">
+                        This was my old laptop, couldn't even run Minecraft, I made the OS look like Windows 7. 
+                    </p>
+                    <p>Specs:</p>
+                    <ul class="specs">
+                        <li>Intel Core i5-2430M</li>
+                        <li>4 GB of DDR3 RAM</li>
+                        <li>Intel HD Graphics 3000</li>
+                        <li>Crucial 512GB SSD</li>
+                        <li>3 USB 2.0 Ports, SD Card slot, HDMI, VGA, Ethernet, 3.5mm jack for headphones and microphone, AC connector </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="flex">
+                <img src="computers/imac.jpg" alt="iMac" width="400">
+                <div>
+                    <h2 class="text-2xl font-bold tracking-tight">iMac (21.5-inch, Late 2013)</h2>
+                    <p class="mb-2 text-sm text-gray-400 mt-5">
+                        This is my mother's computer, became very slow 'cause there is still an HDD inside, used it during lockdown for school meetings and a little of gaming.  
+                    </p>
+                    <p>Specs:</p>
+                    <ul class="specs">
+                        <li>Intel Core i5 2.7 GHz</li>
+                        <li>8 GB of DDR3 RAM</li>
+                        <li>NVIDIA GeForce GT 750M</li>
+                        <li>1TB HDD</li>
+                        <li>4 USB 2.0 Ports, SD card slot, 2 Thunderbolt Ports, Ethernet, 3.5mm jack </li>
                     </ul>
                 </div>
             </div>
@@ -70,7 +130,7 @@ import Layout from "../layouts/Layout.astro";
 				I'm now listening to ⬇️
 			</h2>
 			<div class="spotify-player">
-				<a href="">
+				<a href="#">
 					<img
 						src="https://spotify-github-profile.kittinanx.com/api/view?uid=edot2007&cover_image=true&theme=novatorem&show_offline=true&background_color=121212&interchange=false&bar_color=53b14f&bar_color_cover=false"
 						alt=""
@@ -186,10 +246,19 @@ import Layout from "../layouts/Layout.astro";
         list-style-type: disc;
         list-style-position: inside;
     }
+
+    .flex img{
+        padding-right: 2%;
+    }
     
     @media (max-width: 768px) {
         .link-card-grid {
             grid-template-columns: 1fr;
         }
+        .flex{
+            flex-direction: column;
+        }
     }
+
+    
 </style>
