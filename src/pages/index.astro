@@ -22,7 +22,7 @@ import Layout from "../layouts/Layout.astro";
 			</div>
 		</section>
 		<section>
-            I'm a 15 years old developer, gamer and student, and I love everything tech related. <br>
+            I'm a <div class="age">⠀⠀⠀⠀⠀⠀⠀⠀</div> developer, gamer and student from Italy, and I love everything tech related. <br>
             I've worked on many projects using different languages, such as Scratch, HTML and CSS, JavaScript, C#, Python and Astro (used to make this website). <br>
             The ones I am most proud of are <a href="#repos" class="coolyellow">here</a>
         </section>
@@ -225,6 +225,10 @@ import Layout from "../layouts/Layout.astro";
         gap: 16px;
     }
 
+    .age{
+        display: inline-block;
+    }
+
     .project-site {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
@@ -273,3 +277,21 @@ import Layout from "../layouts/Layout.astro";
       vertical-align: -0.1em;
     }
 </style>
+
+<script>
+    const agePart = document.querySelector(".age");
+    const birthDate = new Date(1245279600000); 
+    const interval = 1000 * 60; 
+    const getAge = () => new Date(Date.now() - birthDate).getUTCFullYear() - 1970;
+    let age = localStorage.getItem("age") || getAge();
+    agePart.innerText = `${age} years old`;
+
+    const updateAge = () => {
+        age = getAge();
+        const text = `${age} years old`;
+        localStorage.setItem("age", age); 
+        agePart.innerText = text;
+        setTimeout(updateAge, interval); 
+    };
+    updateAge();
+</script>
